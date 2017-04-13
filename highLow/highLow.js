@@ -75,14 +75,16 @@ d3.csv(filename, function(data) {
 
 
 		for(obj in barMaxVals){
-			array.push({
-				key: obj,
-				num: barMaxVals[obj]
-			});
-			array.push({
-				key: obj,
-				num: barMinVals[obj]
-			});
+			if (barMinVals != 999) {
+				array.push({
+					key: obj,
+					num: barMaxVals[obj]
+				});
+				array.push({
+					key: obj,
+					num: barMinVals[obj]
+				});
+			}
 		}
 
 		var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
