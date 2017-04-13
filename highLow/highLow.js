@@ -92,6 +92,10 @@ d3.csv(filename, function(data) {
 						.range([height,0])
 						.domain([0,maxY]);
 
+		var xAxis = d3.svg.axis()
+    				.scale(x)
+   					.orient("bottom")
+
 		var colorScale = d3.scaleOrdinal(d3.schemeCategory20);
 		console.log(array);
 		canvas.selectAll("rect")
@@ -114,7 +118,12 @@ d3.csv(filename, function(data) {
 			  })
 			  .attr("width", 10);
 
+		chart.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
 
-		//console.log(maxY);
+
+		
 	});
 }
