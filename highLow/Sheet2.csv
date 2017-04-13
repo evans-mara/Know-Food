@@ -1,0 +1,539 @@
+﻿Restaurant,SubCategory,Item,Calories
+Arby's,Coffee,Coffee,0
+Arby's,Iced Tea,Brewed Iced Tea â€“ Small Cup,0
+Arby's,Juice,CapriSun Fruit Juice,80
+Arby's,Juice,Orange Juice,140
+Arby's,Juice,CapriSun Fruit Juice,80
+Arby's,Milk,Shamrock Farms Lowfat Chocolate Milk,150
+Arby's,Milk,Shamrock Farms Lowfat White Milk,90
+Arby's,Milk,Shamrock Farms Lowfat Chocolate Milk,150
+Arby's,Milk,Shamrock Farms Lowfat White Milk,90
+Arby's,Shake,Chocolate Shake Regular,570
+Arby's,Shake,Chocolate Shake Small,440
+Arby's,Shake,Jamocha Shake Regular,560
+Arby's,Shake,Jamocha Shake Small,440
+Arby's,Shake,Orange Cream Shake,660
+Arby's,Shake,Pumpkin Cheesecake Shake,650
+Arby's,Shake,Vanilla Shake Regular,470
+Arby's,Shake,Vanilla Shake Small,380
+Arby's,Shake,Jr Chocolate Shake,350
+Arby's,Shake,Jr Jamocha Shake,350
+Arby's,Shake,Jr Vanilla Shake,280
+Arby's,Soda,Diet Pepsi â€“ Small Cup,0
+Arby's,Soda,Dr Pepper â€“ Small Cup,180
+Arby's,Soda,Mist Twst,190
+Arby's,Soda,Mountain Dew â€“ Small Cup,200
+Arby's,Soda,Pepsi - Small Cup,180
+Arby's,Water,Nestle Pure Life Bottled Water,0
+Burger King,Coffee,Iced Coffee Caramel,170
+Burger King,Coffee,Iced Coffee Regular,160
+Burger King,Coffee,Iced Coffee Vanilla,180
+Burger King,Coffee,Latte Caramel,320
+Burger King,Coffee,Latte Mocha,210
+Burger King,Coffee,Latte Regular,180
+Burger King,Coffee,Latte Vanilla,320
+Burger King,Coffee,Nonfat Latte Caramel,300
+Burger King,Coffee,Nonfat Latte Mocha,160
+Burger King,Coffee,Nonfat Latte Regular,150
+Burger King,Coffee,Nonfat Latte Vanilla,300
+Burger King,Coffee,Seattle's Best CoffeeÂ® - Decaf,0
+Burger King,Coffee,Seattle's Best CoffeeÂ® - Regular,0
+Burger King,Hot Chocolate,Hot Chocolate,230
+Burger King,Iced Tea,Peach Tea,100
+Burger King,Iced Tea,Sweet Tea,120
+Burger King,Iced Tea,Unsweetened Tea,0
+Burger King,Juice,Capri SunÂ® 100% Apple Juice,80
+Burger King,Juice,Hi-C Fruit Punch,200
+Burger King,Juice,Minute Maid Light Lemonade,10
+Burger King,Juice,Minute Maid Orange Juice,140
+Burger King,Milk,1% Low Fat Chocolate Milk,160
+Burger King,Milk,Fat Free Milk,90
+Burger King,Shake,Chocolate Milk Shake,690
+Burger King,Shake,Strawberry Banana Smoothie,310
+Burger King,Shake,Strawberry Milk Shake,610
+Burger King,Shake,Tropical Mango Smoothie,330
+Burger King,Shake,Vanilla Milk Shake,660
+Burger King,Shake,BK Caramel Frappe,510
+Burger King,Shake,BK Mocha Frappe,510
+Burger King,Slush,Frozen Coke,110
+Burger King,Slush,Frozen SURGEâ„¢ Large,120
+Burger King,Slush,Frozen SURGEâ„¢ Medium,100
+Burger King,Slush,Frozen SURGEâ„¢ Small,80
+Burger King,Slush,Blue Raspberry ICEE,120
+Burger King,Soda,Barq's Root Beer,220
+Burger King,Soda,Cherry Coke,200
+Burger King,Soda,Coca Cola Classic,190
+Burger King,Soda,Diet Coke,0
+Burger King,Soda,Dr. Pepper,190
+Burger King,Soda,Fanta Orange,210
+Burger King,Soda,Sprite,190
+Burger King,Soda,Vault,210
+Carl's Jr,Shake,Chocolate Malt,760
+Carl's Jr,Shake,Chocolate Shake,690
+Carl's Jr,Shake,OREOÂ® Cookie Malt,790
+Carl's Jr,Shake,OREOÂ® Cookie Shake,720
+Carl's Jr,Shake,Strawberry Malt,760
+Carl's Jr,Shake,Strawberry Shake,690
+Carl's Jr,Shake,Vanilla Malt,770
+Carl's Jr,Shake,Vanilla Shake,700
+Chick-fil-a,Coffee,Coffee Large,5
+Chick-fil-a,Coffee,Coffee Medium,5
+Chick-fil-a,Coffee,Coffee Small,5
+Chick-fil-a,Coffee,Iced Coffee Large,180
+Chick-fil-a,Coffee,Iced Coffee Small,150
+Chick-fil-a,Coffee,Vanilla Iced Coffee Large,200
+Chick-fil-a,Coffee,Vanilla Iced Coffee Small,160
+Chick-fil-a,Iced Tea,Sweet Tea (small),90
+Chick-fil-a,Iced Tea,Unsweetened Iced Tea Large,0
+Chick-fil-a,Iced Tea,Unsweetened Iced Tea Medium,0
+Chick-fil-a,Juice,Diet Lemonade (small),15
+Chick-fil-a,Juice,Lemonade (small),170
+Chick-fil-a,Juice,Minute Maid Apple Juice Box,90
+Chick-fil-a,Juice,Simply Orange Juice,160
+Chick-fil-a,Juice,Milk,90
+Chick-fil-a,Shake,Peppermint Chocolate Chip Milkshake Large,910
+Chick-fil-a,Shake,Peppermint Chocolate Chip Milkshake Small,660
+Chick-fil-a,Shake,Strawberry Milkshake Large,770
+Chick-fil-a,Shake,Strawberry Milkshake Small,610
+Chick-fil-a,Shake,Vanilla Milkshake Large,660
+Chick-fil-a,Shake,Vanilla Milkshake Small,550
+Chick-fil-a,Slush,Frosted Lemonade Diet,240
+Chick-fil-a,Slush,Frosted Lemonade Regular,330
+Chick-fil-a,Soda,Coca-Cola Classic (small),120
+Chick-fil-a,Soda,Diet Coke Large,0
+Chick-fil-a,Soda,Diet Coke Medium,0
+Chick-fil-a,Soda,Diet Coke Small,0
+Chick-fil-a,Soda,Dr Pepper Large,130
+Chick-fil-a,Soda,Dr Pepper Medium,130
+Chick-fil-a,Soda,Dr Pepper Small,130
+Chick-fil-a,Soda,Sprite Large,260
+Chick-fil-a,Soda,Sprite Medium,170
+Chick-fil-a,Soda,Sprite Small,130
+In-N-Out,Iced Tea,Iced Tea,0
+In-N-Out,Juice,Lemonade,179
+In-N-Out,Juice,Minute Maid Light Lemonade,8
+In-N-Out,Milk,Milk,180
+In-N-Out,Shake,Chocolate Shake,590
+In-N-Out,Shake,Strawberry Shake,590
+In-N-Out,Shake,Vanilla Shake,580
+In-N-Out,Soda,7UP,200
+In-N-Out,Soda,Coca-Cola,195
+In-N-Out,Soda,Coffee,5
+In-N-Out,Soda,Diet Coke,0
+In-N-Out,Soda,Dr Pepper,200
+In-N-Out,Soda,Root Beer,219
+Jack in the Box,Coffe,Iced Coffee Caramel,160
+Jack in the Box,Coffe,Iced Coffee Original,170
+Jack in the Box,Coffe,Iced Coffee Vanilla,170
+Jack in the Box,Coffe,Kona ClassicÂ® Coffee Large,10
+Jack in the Box,Coffe,Kona ClassicÂ® Coffee Small,5
+Jack in the Box,Coffe,Kona ClassicÂ® Decaf Coffee Large,10
+Jack in the Box,Coffe,Kona ClassicÂ® Decaf Coffee Small,5
+Jack in the Box,Iced Tea,"Flavored Iced Tea, Mango 24 fl oz.",80
+Jack in the Box,Iced Tea,"Flavored Iced Tea, Peach 24 fl oz.",80
+Jack in the Box,Iced Tea,"Flavored Iced Tea, Raspberry 24 fl oz.",80
+Jack in the Box,Iced Tea,Gold PeakÂ® Fresh Brewed Iced Tea Large,5
+Jack in the Box,Iced Tea,Gold PeakÂ® Fresh Brewed Iced Tea Medium,5
+Jack in the Box,Iced Tea,Gold PeakÂ® Fresh Brewed Iced Tea Small,5
+Jack in the Box,Iced Tea,Gold PeakÂ® Fresh Brewed Iced Tea Value,0
+Jack in the Box,Juice,Hi-CÂ® Fruit Punch Large,580
+Jack in the Box,Juice,Hi-CÂ® Fruit Punch Medium,420
+Jack in the Box,Juice,Hi-CÂ® Fruit Punch Small,260
+Jack in the Box,Juice,Hi-CÂ® Fruit Punch Value,160
+Jack in the Box,Juice,Minute MaidÂ® Lemonade Large,490
+Jack in the Box,Juice,Minute MaidÂ® Lemonade Medium,350
+Jack in the Box,Juice,Minute MaidÂ® Lemonade Small,220
+Jack in the Box,Juice,Minute MaidÂ® Lemonade Value,130
+Jack in the Box,Juice,Minute MaidÂ® Orange Juice 10 fl oz.,140
+Jack in the Box,Milk,Reduced Fat Milk Chug 2%,120
+Jack in the Box,Shake,Mango Smoothie Large,450
+Jack in the Box,Shake,Mango Smoothie Small,290
+Jack in the Box,Shake,Strawberry Banana Smoothie Large,440
+Jack in the Box,Shake,Strawberry Banana Smoothie Small,290
+Jack in the Box,Shake,Strawberry Smoothie Large,400
+Jack in the Box,Shake,Strawberry Smoothie Small,270
+Jack in the Box,Shake,Chocolate Shake w/ Whipped Topping Large,1150
+Jack in the Box,Shake,Chocolate Shake w/ Whipped Topping Small,800
+Jack in the Box,Shake,OreoÂ® Cookie Shake w/ Whipped Topping Large,1170
+Jack in the Box,Shake,OreoÂ® Cookie Shake w/ Whipped Topping Small,810
+Jack in the Box,Shake,Strawberry Shake w/ Whipped Topping Large,1120
+Jack in the Box,Shake,Strawberry Shake w/ Whipped Topping Small,780
+Jack in the Box,Shake,Vanilla Shake w/ Whipped Topping Large,1000
+Jack in the Box,Shake,Vanilla Shake w/ Whipped Topping Small,700
+Jack in the Box,Soda,Barq'sÂ® Root Beer Large,550
+Jack in the Box,Soda,Barq'sÂ® Root Beer Medium,400
+Jack in the Box,Soda,Barq'sÂ® Root Beer Small,250
+Jack in the Box,Soda,Barq'sÂ® Root Beer Value,150
+Jack in the Box,Soda,Bottled Water,0
+Jack in the Box,Soda,Chocolate Lowfat Milk Chug,180
+Jack in the Box,Soda,Coca-Cola ClassicÂ® Large,500
+Jack in the Box,Soda,Coca-Cola ClassicÂ® Medium,360
+Jack in the Box,Soda,Coca-Cola ClassicÂ® Small,230
+Jack in the Box,Soda,Coca-Cola ClassicÂ® Value,140
+Jack in the Box,Soda,Diet CokeÂ® Large,5
+Jack in the Box,Soda,Diet CokeÂ® Medium,5
+Jack in the Box,Soda,Diet CokeÂ® Small,0
+Jack in the Box,Soda,Diet CokeÂ® Value,0
+Jack in the Box,Soda,Diet Dr PepperÂ® Large,0
+Jack in the Box,Soda,Diet Dr PepperÂ® Medium,0
+Jack in the Box,Soda,Diet Dr PepperÂ® Small,0
+Jack in the Box,Soda,Diet Dr PepperÂ® Value,0
+Jack in the Box,Soda,Dr PepperÂ® Large,500
+Jack in the Box,Soda,Dr PepperÂ® Medium,360
+Jack in the Box,Soda,Dr PepperÂ® Small,230
+Jack in the Box,Soda,Dr PepperÂ® Value,140
+Jack in the Box,Soda,FantaÂ® Orange Large,450
+Jack in the Box,Soda,FantaÂ® Orange Medium,330
+Jack in the Box,Soda,FantaÂ® Orange Small,210
+Jack in the Box,Soda,FantaÂ® Orange Value,120
+Jack in the Box,Soda,FantaÂ® Strawberry Large,450
+Jack in the Box,Soda,FantaÂ® Strawberry Medium,330
+Jack in the Box,Soda,FantaÂ® Strawberry Small,210
+Jack in the Box,Soda,FantaÂ® Strawberry Value,120
+Jack in the Box,Soda,SpriteÂ® Large,490
+Jack in the Box,Soda,SpriteÂ® Medium,350
+Jack in the Box,Soda,SpriteÂ® Small,220
+Jack in the Box,Soda,SpriteÂ® Value,130
+McDonald's,Coffee,Coffee,0
+McDonald's,Coffee,Iced Coffee Caramel,190
+McDonald's,Coffee,Iced Coffee French Vanilla,190
+McDonald's,Coffee,Iced Coffee Hazelnut,190
+McDonald's,Coffee,Iced Coffee Regular,200
+McDonald's,Coffee,Iced Coffee Sugar Free French Vanilla,90
+McDonald's,Coffee,Iced Mocha Caramel,300
+McDonald's,Coffee,Iced Mocha Nonfat,270
+McDonald's,Coffee,Iced Mocha Nonfat Caramel,230
+McDonald's,Coffee,Iced Mocha Regular,310
+McDonald's,Coffee,Latte Caramel,280
+McDonald's,Coffee,Latte French Vanilla,280
+McDonald's,Coffee,Latte Hazelnut,280
+McDonald's,Coffee,Latte Regular,180
+McDonald's,Coffee,Latte Sugar Free French Vanilla,160
+McDonald's,Coffee,Mocha Caramel,290
+McDonald's,Coffee,Mocha Nonfat,280
+McDonald's,Coffee,Mocha Nonfat Caramel,240
+McDonald's,Coffee,Mocha Regular,330
+McDonald's,Coffee,Nonfat Latte Caramel,220
+McDonald's,Coffee,Nonfat Latte French Vanilla,220
+McDonald's,Coffee,Nonfat Latte Hazelnut,220
+McDonald's,Coffee,Nonfat Latte Regular,110
+McDonald's,Coffee,Nonfat Latte Sugar Free French Vanilla,90
+McDonald's,Coffee,Shamrock Mocha Large,490
+McDonald's,Coffee,Shamrock Mocha Medium,400
+McDonald's,Coffee,Shamrock Mocha Small,330
+McDonald's,Hot Chocolate,Hot Chocolate Nonfat,310
+McDonald's,Hot Chocolate,Hot Chocolate Regular,380
+McDonald's,Hot Chocolate,McCafÃ© Caramel Hot Chocolate w/ Nonfat Milk,260
+McDonald's,Hot Chocolate,Mocha White Chocolate,320
+McDonald's,Hot Chocolate,Shamrock Hot Chocolate Large,280
+McDonald's,Hot Chocolate,White Hot Chocolate,350
+McDonald's,Iced Tea,Iced Tea,0
+McDonald's,Iced Tea,Sweet Tea,180
+McDonald's,Juice,Hi-C Orange Lavaburst,240
+McDonald's,Juice,McCafÃ© Classic Lemonade,100
+McDonald's,Juice,McCafÃ© Strawberry Lemonade,120
+McDonald's,Juice,Minute Maid Apple Juice Box,100
+McDonald's,Juice,Minute MaidÂ® Orange Juice,190
+McDonald's,Juice,POWERade Mountain Berry Blast,150
+McDonald's,Juice,Red Flash Extra Small,110
+McDonald's,Juice,Red Flash Large,300
+McDonald's,Juice,Red Flash Medium,220
+McDonald's,Juice,Red Flash Small,150
+McDonald's,Milk,1% Low Fat Milk Jug,100
+McDonald's,Milk,Fat Free Chocolate Milk Jug,130
+McDonald's,Shake,Blueberry Pomegranate Smoothie,220
+McDonald's,Shake,Mango Pineapple Smoothie,220
+McDonald's,Shake,Strawberry Banana Smoothie,210
+McDonald's,Shake,Frappe Caramel,450
+McDonald's,Shake,Frappe Chocolate Chip,530
+McDonald's,Shake,Mocha Frappe,450
+McDonald's,Shake,Oreo FrappÃ©,540
+McDonald's,Shake,Shamrock Chocolate Chip FrappÃ© Large,900
+McDonald's,Shake,Shamrock Chocolate Chip FrappÃ© Medium,680
+McDonald's,Shake,Shamrock Chocolate Chip FrappÃ© Small,570
+McDonald's,Slush,McCafÃ© Frozen Classic Lemonade,160
+McDonald's,Slush,McCafÃ© Frozen Strawberry Lemonade,180
+McDonald's,Soda,Coca-Cola Classic,210
+McDonald's,Soda,Diet Coke,0
+McDonald's,Soda,Diet Dr Pepper,0
+McDonald's,Soda,Dr Pepper,210
+McDonald's,Soda,Sprite,210
+McDonald's,Water,DasaniÂ© Water,0
+Popeye's,Coffee,Coffee,0
+Popeye's,Iced Tea,Sweet Tea,180
+Popeye's,Iced Tea,Unsweetened Tea,0
+Popeye's,Juice,Orange Juice,140
+Popeye's,Soda,Coke,230
+Popeye's,Soda,Diet Coke,0
+Popeye's,Soda,Diet Pepsi,0
+Popeye's,Soda,Dr Pepper,250
+Popeye's,Soda,Fanta Orange,300
+Popeye's,Soda,Fanta Strawberry,300
+Popeye's,Soda,Hawaiian Punch,175
+Popeye's,Soda,Mountain Dew,290
+Popeye's,Soda,Pepsi,200
+Popeye's,Soda,Sprite,210
+Sonic,Iced Tea,Blackberry Diet Green Iced Tea Gallon,50
+Sonic,Iced Tea,Blackberry Diet Green Iced Tea Large,10
+Sonic,Iced Tea,Blackberry Diet Green Iced Tea Medium,5
+Sonic,Iced Tea,Blackberry Diet Green Iced Tea Route 44,10
+Sonic,Iced Tea,Blackberry Diet Green Iced Tea Small,0
+Sonic,Iced Tea,Blackberry Diet Green Iced Tea Wacky Pack,0
+Sonic,Iced Tea,Blackberry Green Iced Tea Gallon,1100
+Sonic,Iced Tea,Blackberry Green Iced Tea Large,210
+Sonic,Iced Tea,Blackberry Green Iced Tea Medium,120
+Sonic,Iced Tea,Blackberry Green Iced Tea Route 44,270
+Sonic,Iced Tea,Blackberry Green Iced Tea Small,100
+Sonic,Iced Tea,Blackberry Green Iced Tea Wacky Pack,60
+Sonic,Iced Tea,Blackberry Sweet Iced Tea Gallon,1560
+Sonic,Iced Tea,Blackberry Sweet Iced Tea Large,300
+Sonic,Iced Tea,Blackberry Sweet Iced Tea Medium,180
+Sonic,Iced Tea,Blackberry Sweet Iced Tea Route 44,380
+Sonic,Iced Tea,Blackberry Sweet Iced Tea Small,140
+Sonic,Iced Tea,Blackberry Sweet Iced Tea Wacky Pack,80
+Sonic,Iced Tea,Blackberry Unsweet Iced Tea Gallon,50
+Sonic,Iced Tea,Blackberry Unsweet Iced Tea Large,10
+Sonic,Iced Tea,Blackberry Unsweet Iced Tea Medium,5
+Sonic,Iced Tea,Blackberry Unsweet Iced Tea Route 44,10
+Sonic,Iced Tea,Blackberry Unsweet Iced Tea Small,0
+Sonic,Iced Tea,Blackberry Unsweet Iced Tea Wacky Pack,0
+Sonic,Iced Tea,Cranberry Tea Large,60
+Sonic,Iced Tea,Cranberry Tea Medium,40
+Sonic,Iced Tea,Cranberry Tea Route 44,80
+Sonic,Iced Tea,Cranberry Tea Small,20
+Sonic,Iced Tea,Cranberry Tea Wacky Pack,20
+Sonic,Iced Tea,Diet Green Tea Large,5
+Sonic,Iced Tea,Diet Green Tea Medium,5
+Sonic,Iced Tea,Diet Green Tea Route 44,10
+Sonic,Iced Tea,Diet Green Tea Small,5
+Sonic,Iced Tea,Diet Green Tea Wacky Pack,0
+Sonic,Iced Tea,Green Tea Large,210
+Sonic,Iced Tea,Green Tea Medium,140
+Sonic,Iced Tea,Green Tea Route 44,290
+Sonic,Iced Tea,Green Tea Small,110
+Sonic,Iced Tea,Green Tea Wacky Pack,90
+Sonic,Iced Tea,Iced Tea Large,5
+Sonic,Iced Tea,Iced Tea Medium,5
+Sonic,Iced Tea,Iced Tea Route 44,10
+Sonic,Iced Tea,Iced Tea Small,5
+Sonic,Iced Tea,Iced Tea Wacky Pack,5
+Sonic,Iced Tea,Lemon Diet Green Iced Tea Gallon,60
+Sonic,Slush,Atomic Lemon Slush Large,440
+Sonic,Slush,Atomic Lemon Slush Medium,270
+Sonic,Slush,Atomic Lemon Slush Mini,160
+Sonic,Slush,Atomic Lemon Slush Route 44,600
+Sonic,Slush,Atomic Lemon Slush Small,190
+Sonic,Slush,Banana Taffy Slush Large,430
+Sonic,Slush,Banana Taffy Slush Medium,270
+Sonic,Slush,Banana Taffy Slush Route 44,590
+Sonic,Slush,Banana Taffy Slush Small,190
+Sonic,Slush,Banana Taffy Slush Wacky Pack,160
+Sonic,Slush,Blue Coconut Slush Large,450
+Sonic,Slush,Blue Coconut Slush Medium,280
+Sonic,Slush,Blue Coconut Slush Route 44,610
+Sonic,Slush,Blue Coconut Slush Small,190
+Sonic,Slush,Blue Coconut Slush Wacky Pack,170
+Sonic,Slush,Cherry Slush Large,460
+Sonic,Slush,Cherry Slush Medium,290
+Sonic,Slush,Cherry Slush Route 44,630
+Sonic,Slush,Cherry Slush Small,190
+Sonic,Slush,Cherry Slush Wacky Pack,170
+Sonic,Slush,Cotton Candy Slush Large,430
+Sonic,Slush,Cotton Candy Slush Medium,270
+Sonic,Slush,Cotton Candy Slush Route 44,600
+Sonic,Slush,Cotton Candy Slush Small,190
+Sonic,Slush,Cotton Candy Slush Wacky Pack,160
+Sonic,Slush,Grape Slush Large,450
+Sonic,Slush,Grape Slush Medium,280
+Sonic,Slush,Grape Slush Route 44,610
+Sonic,Slush,Grape Slush Small,190
+Sonic,Slush,Grape Slush Wacky Pack,170
+Sonic,Slush,Green Apple Slush Large,480
+Sonic,Slush,Green Apple Slush Medium,300
+Sonic,Slush,Green Apple Slush Route 44,660
+Sonic,Slush,Green Apple Slush Small,200
+Sonic,Slush,Green Apple Slush Wacky Pack,180
+Sonic,Slush,Miami Sunrise Slush Large,430
+Sonic,Slush,Miami Sunrise Slush Medium,270
+Sonic,Slush,Miami Sunrise Slush Route 44,580
+Sonic,Slush,Miami Sunrise Slush Small,180
+Sonic,Slush,Miami Sunrise Slush Wacky Pack,160
+Sonic,Slush,Minute Maid Cranberry Slush Large,450
+Sonic,Slush,Minute Maid Cranberry Slush Medium,280
+Sonic,Slush,Minute Maid Cranberry Slush Route 44,620
+Sonic,Slush,Minute Maid Cranberry Slush Small,190
+Sonic,Slush,Minute Maid Cranberry Slush Wacky Pack,170
+Sonic,Slush,Orange Slush Large,450
+Sonic,Slush,Orange Slush Medium,290
+Sonic,Slush,Orange Slush Route 44,620
+Sonic,Slush,Orange Slush Small,190
+Sonic,Slush,Orange Slush Wacky Pack,170
+Sonic,Slush,Polynesian Punch Slush Large,420
+Sonic,Slush,Polynesian Punch Slush Medium,260
+Sonic,Slush,Polynesian Punch Slush Route 44,580
+Sonic,Slush,Polynesian Punch Slush Small,180
+Sonic,Slush,Polynesian Punch Slush Wacky Pack,160
+Sonic,Slush,Sour Blue Raspberry Slush Large,470
+Sonic,Slush,Sour Blue Raspberry Slush Medium,290
+Sonic,Slush,Sour Blue Raspberry Slush Route 44,640
+Sonic,Slush,Sour Blue Raspberry Slush Small,200
+Sonic,Slush,Sour Blue Raspberry Slush Wacky Pack,170
+Sonic,Slush,Super Peach Ring Slush Large,430
+Sonic,Slush,Super Peach Ring Slush Medium,270
+Sonic,Slush,Super Peach Ring Slush Route 44,590
+Sonic,Slush,Super Peach Ring Slush Small,190
+Sonic,Slush,Super Peach Ring Slush Wacky Pack,150
+Sonic,Slush,Watermelon Slush Large,460
+Sonic,Slush,Watermelon Slush Medium,290
+Sonic,Slush,Watermelon Slush Route 44,630
+Sonic,Slush,Watermelon Slush Small,190
+Sonic,Slush,Watermelon Slush Wacky Pack,170
+Taco Bell,Coffee,Cinnabon Delights Coffee Hot,160
+Taco Bell,Coffee,Cinnabon Delights Coffee Iced,160
+Taco Bell,Coffee,Premium Hot Coffee with creamer,35
+Taco Bell,Coffee,Premium Iced Coffee,10
+Taco Bell,Coffee,Premium Roast Coffee 12.5 oz,10
+Taco Bell,Iced Tea,Brisk Iced Tea and Lemonade 16 oz,80
+Taco Bell,Iced Tea,Brisk Iced Tea and Lemonade 20 oz,100
+Taco Bell,Iced Tea,Brisk Iced Tea and Lemonade 30 oz,150
+Taco Bell,Iced Tea,Brisk Iced Tea and Lemonade 40 oz,200
+Taco Bell,Iced Tea,Brisk Mango Fiesta 16 oz,100
+Taco Bell,Iced Tea,Brisk Mango Fiesta 20 oz,120
+Taco Bell,Iced Tea,Brisk Mango Fiesta 30 oz,190
+Taco Bell,Iced Tea,Brisk Mango Fiesta 40 oz,250
+Taco Bell,Juice,Orange Juice 10 oz,140
+Taco Bell,Juice,Tropicana Pink Lemonade 16 oz,200
+Taco Bell,Juice,Tropicana Pink Lemonade 20 oz,250
+Taco Bell,Juice,Tropicana Pink Lemonade 30 oz,380
+Taco Bell,Juice,Tropicana Pink Lemonade 40 oz,500
+Taco Bell,Slush,AirHeads White Mystery Freeze 16 oz,170
+Taco Bell,Slush,AirHeads White Mystery Freeze 20 oz,210
+Taco Bell,Slush,RockstarÂ® Punch Freeze,220
+Taco Bell,Slush,Snapple Lemonade Freeze 16 oz,190
+Taco Bell,Slush,Snapple Lemonade Freeze 20 oz,240
+Taco Bell,Slush,Starburst Strawberry Freeze 16 oz,190
+Taco Bell,Slush,Starburst Strawberry Freeze 20 oz,240
+Taco Bell,Soda,Diet Mountain Dew Baja Blast 16 oz,0
+Taco Bell,Soda,Diet Mountain Dew Baja Blast 20 oz,0
+Taco Bell,Soda,Diet Mountain Dew Baja Blast 30 oz,0
+Taco Bell,Soda,Diet Mountain Dew Baja Blast 40 oz,0
+Taco Bell,Soda,Diet Pepsi 16 oz,0
+Taco Bell,Soda,Diet Pepsi 20 oz,0
+Taco Bell,Soda,Diet Pepsi 30 oz,0
+Taco Bell,Soda,Diet Pepsi 40 oz,0
+Taco Bell,Soda,Dr Pepper 16 oz,200
+Taco Bell,Soda,Dr Pepper 20 oz,250
+Taco Bell,Soda,Dr Pepper 30 oz,380
+Taco Bell,Soda,Dr Pepper 40 oz,500
+Taco Bell,Soda,Manzanita Sol 16 oz,220
+Taco Bell,Soda,Manzanita Sol 20 oz,280
+Taco Bell,Soda,Manzanita Sol 30 oz,410
+Taco Bell,Soda,Manzanita Sol 40 oz,550
+Taco Bell,Soda,Mountain Dew 16 oz,220
+Taco Bell,Soda,Mountain Dew 20 oz,280
+Taco Bell,Soda,Mountain Dew 30 oz,410
+Taco Bell,Soda,Mountain Dew 40 oz,550
+Taco Bell,Soda,Mountain Dew Baja Blast 16 oz,220
+Taco Bell,Soda,Mountain Dew Baja Blast 20 oz,280
+Taco Bell,Soda,Mountain Dew Baja Blast 30 oz,410
+Taco Bell,Soda,Mountain Dew Baja Blast 40 oz,550
+Taco Bell,Soda,Mountain Dew Baja Blast Freeze 16 oz,200
+Taco Bell,Soda,Mountain Dew Baja Blast Freeze 20 oz,250
+Taco Bell,Soda,Mountain Dew Kickstart Orange Citrus 16 oz,80
+Taco Bell,Soda,Mountain Dew Kickstart Orange Citrus 20 oz,100
+Taco Bell,Soda,Mountain Dew Kickstart Orange Citrus 30 oz,150
+Taco Bell,Soda,Mountain Dew Kickstart Orange Citrus 40 oz,200
+Taco Bell,Soda,Mountain Dew Sangria Blast 16 oz,220
+Taco Bell,Soda,Mountain Dew Sangria Blast 20 oz,280
+Taco Bell,Soda,Mountain Dew Sangria Blast 30 oz,410
+Taco Bell,Soda,Mountain Dew Sangria Blast 40 oz,550
+Taco Bell,Soda,MUG Root Beer 16 oz,200
+Taco Bell,Soda,MUG Root Beer 20 oz,250
+Taco Bell,Soda,MUG Root Beer 30 oz,380
+Taco Bell,Soda,MUG Root Beer 40 oz,500
+Taco Bell,Soda,Pepsi 16 oz,200
+Taco Bell,Soda,Pepsi 20 oz,250
+Taco Bell,Soda,Pepsi 30 oz,380
+Taco Bell,Soda,Pepsi 40 oz,500
+Taco Bell,Soda,Sierra Mist 16 oz,200
+Taco Bell,Soda,Sierra Mist 20 oz,250
+Taco Bell,Soda,Sierra Mist 30 oz,380
+Taco Bell,Soda,Sierra Mist 40 oz,500
+Wendy's,Coffee,"Caramel Iced Coffee, Small",80
+Wendy's,Coffee,"Mocha Iced Coffee, Small",100
+Wendy's,Coffee,"Original Redhead Hot Coffee, Decaffeinated, Small",10
+Wendy's,Coffee,"Original Redhead Hot Coffee, Small",10
+Wendy's,Coffee,"Redhead RoastersÂ®Hot Coffee, Regular",0
+Wendy's,Coffee,"Skinny Vanilla Iced Coffee, Small",60
+Wendy's,Coffee,"Vanilla Iced Coffee, Small",90
+Wendy's,Iced Tea,Strawberry Iced Tea,50
+Wendy's,Juice,"All Natural Lemonade, Small Cup",190
+Wendy's,Juice,"Hi-C Flashin' Fruit Punch, Small Cup",170
+Wendy's,Juice,Juicy Juice Apple Juice,90
+Wendy's,Juice,"Minute Maid Light Lemonade, Small Cup",5
+Wendy's,Juice,Strawberry Lemonade,200
+Wendy's,Juice,"Orange Juice, Small",130
+Wendy's,Milk,TruMoo Lowfat Chocolate Milk,140
+Wendy's,Milk,TruMoo Lowfat White Milk,100
+Wendy's,Shake,"Chocolate Frosty, Small",300
+Wendy's,Shake,"Vanilla Frosty, Small",280
+Wendy's,Soda,"Barq's Root Beer, Small Cup",180
+Wendy's,Soda,Brewed Sweetened Iced Tea,110
+Wendy's,Soda,Brewed Unsweetened Iced Tea,5
+Wendy's,Soda,"Coca-Cola, Small Cup",200
+Wendy's,Soda,"Coke Zeroâ„¢, Small Cup",0
+Wendy's,Soda,"Diet Coke, Small Cup",0
+Wendy's,Soda,"Dr Pepper, Small Cup",160
+Wendy's,Soda,"Fanta Orange, Small Cup",180
+Wendy's,Soda,"Pibb Xtra, Small Cup",160
+Wendy's,Soda,"Sprite, Small Cup",160
+Wendy's,Tea,"English Breakfast Premium Hot Tea, Small",0
+Wendy's,Tea,"Lemongrass Green Premium Hot Tea, Small",0
+Wendy's,Water,NestlÃ© Pure Life Bottled Water,0
+Whataburger,Coffee,Coffee Large,10
+Whataburger,Coffee,Coffee Medium,5
+Whataburger,Coffee,Coffee Small,0
+Whataburger,Coffee,Decaf Coffee Large,10
+Whataburger,Coffee,Decaf Coffee Medium,10
+Whataburger,Coffee,Decaf Coffee Small,5
+Whataburger,Iced Tea,Sweet Tea Kids,160
+Whataburger,Iced Tea,Sweet Tea Large,460
+Whataburger,Iced Tea,Sweet Tea Medium,330
+Whataburger,Iced Tea,Sweet Tea Small,200
+Whataburger,Iced Tea,Unsweetened Tea Kids,0
+Whataburger,Iced Tea,Unsweetened Tea Large,0
+Whataburger,Iced Tea,Unsweetened Tea Medium,0
+Whataburger,Iced Tea,Unsweetened Tea Small,0
+Whataburger,Juice,Minute Maid Light Lemonade,15
+Whataburger,Juice,Powerade Fruit Punch,190
+Whataburger,Juice,Simply Orange- Orange Juice,190
+Whataburger,Milk,Milk Low Fat 1%,110
+Whataburger,Shake,Chocolate Malt 16 oz,470
+Whataburger,Shake,Chocolate Malt 20 oz,670
+Whataburger,Shake,Chocolate Malt 32 oz,940
+Whataburger,Shake,Chocolate Shake 16 oz,450
+Whataburger,Shake,Chocolate Shake 20 oz,630
+Whataburger,Shake,Chocolate Shake 32 oz,910
+Whataburger,Shake,Strawberry Malt 16 oz,470
+Whataburger,Shake,Strawberry Malt 20 oz,670
+Whataburger,Shake,Strawberry Malt 32 oz,940
+Whataburger,Shake,Strawberry Shake 16 oz,460
+Whataburger,Shake,Strawberry Shake 20 oz,630
+Whataburger,Shake,Strawberry Shake 32 oz,910
+Whataburger,Shake,Vanilla Malt 16 oz,440
+Whataburger,Shake,Vanilla Malt 20 oz,590
+Whataburger,Shake,Vanilla Malt 32 oz,880
+Whataburger,Shake,Vanilla Shake 16 oz,420
+Whataburger,Shake,Vanilla Shake 20 oz,560
+Whataburger,Shake,Vanilla Shake 32 oz,850
+Whataburger,Soda,Barq's Root Beer,330
+Whataburger,Soda,Caffeine-free Diet Coke,0
+Whataburger,Soda,Cherry Coke,310
+Whataburger,Soda,Chocolate Milk Low Fat 1%,180
+Whataburger,Soda,Coca-Cola Classic,300
+Whataburger,Soda,Diet Coke,0
+Whataburger,Soda,Diet Dr Pepper,0
+Whataburger,Soda,Dr Pepper,280
+Whataburger,Soda,Fanta Orange,320
+Whataburger,Soda,Fanta Strawberry,340
+Whataburger,Soda,Sprite,290
