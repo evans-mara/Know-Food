@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pie Chart</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="pieChart.js"> </script>
+</head>
+<body>
+Category: 
+<select id = "categorySelect"> 
+<option>Beverage</option>
+<option>Breakfast</option>
+<option>Chicken</option>
+<option>Condiment</option>
+<option>Dessert</option>
+<option>Kids</option>
+<option>Salad</option>
+<option>Sandwich</option>
+<option>Side</option>
+</select>
+Subcategory: 
+<script> 
+pieChart("foodDataSet.csv");
+</script>
+</body>
+</html>
