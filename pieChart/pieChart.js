@@ -25,7 +25,7 @@ d3.csv(filename, function(data) {
 	Object.keys(counts).forEach(function(key) {
     categoryCounts.push(counts[key]);
 });
-	console.log(modifiedData);
+	console.log(categoryCounts);
 });
 
 
