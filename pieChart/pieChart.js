@@ -3,6 +3,8 @@ var margin = {top: 20, bottom: 20, left: 60, right: 60};
 var width = 750 - margin.left - margin.right;
 var height = 750 - margin.top - margin.bottom;
 var radius = Math.min(width, height) / 2;
+var categoryCounts = [];
+var currentCategory = $("#categorySelect").val();
 
 
 d3.csv(filename, function(data) {
@@ -19,10 +21,13 @@ d3.csv(filename, function(data) {
 		counts[key].count++;
 	});
 
-	var modifiedData = [];
+	
 	Object.keys(counts).forEach(function(key) {
-    modifiedData.push(counts[key]);
+    categoryCounts.push(counts[key]);
 });
 	console.log(modifiedData);
+	console.log(currentCategory);
 });
+
+
 }
