@@ -5,12 +5,6 @@ var height = 750 - margin.top - margin.bottom;
 var radius = Math.min(width, height) / 2,
 
 
-var canvas = d3.select(".canvas")
-			 	.append("svg")
-			 	.attr("width", width)
-			 	.attr("height", height);
-
-
 d3.csv(filename, function(data) {
 	var counts = {};
 	data.forEach(function(d) {
