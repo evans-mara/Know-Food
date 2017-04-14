@@ -5,7 +5,7 @@ var height = 750 - margin.top - margin.bottom;
 var radius = Math.min(width, height) / 2;
 var categoryCounts = [];
 var currentCategory = $("#categorySelect").val();
-
+console.log(currentCategory);
 
 d3.csv(filename, function(data) {
 	var counts = {};
@@ -26,7 +26,6 @@ d3.csv(filename, function(data) {
     categoryCounts.push(counts[key]);
 });
 	console.log(modifiedData);
-	console.log(currentCategory);
 });
 
 
