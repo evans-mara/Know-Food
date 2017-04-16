@@ -40,8 +40,8 @@ for (obj in categoryCounts) {
 	if (obj.Category == currentCategory) {
 		pieData.push(
 			{
-				Restaurant: obj.Restaurant;
-				count: obj.count;
+				Restaurant: obj.Restaurant,
+				count: obj.count
 			});
 	}
 }
