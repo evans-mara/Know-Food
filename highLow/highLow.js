@@ -117,9 +117,6 @@ d3.csv(filename, function(data) {
 			  })
 			  .attr("width", 10);
 
-
-
-
 		
 	});
 }
