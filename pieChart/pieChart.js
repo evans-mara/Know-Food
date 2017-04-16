@@ -4,8 +4,16 @@ var width = 750 - margin.left - margin.right;
 var height = 750 - margin.top - margin.bottom;
 var radius = Math.min(width, height) / 2;
 var categoryCounts = [];
+var pieData = [];
 var currentCategory = $("#categorySelect").val();
 console.log(currentCategory);
+
+var pie = d3.pie()
+			.sort(null)
+			.value(function(d) {
+				return d.count;
+			})
+
 
 d3.csv(filename, function(data) {
 	var counts = {};
@@ -25,8 +33,19 @@ d3.csv(filename, function(data) {
 	Object.keys(counts).forEach(function(key) {
     categoryCounts.push(counts[key]);
 });
-	console.log(categoryCounts);
+//	console.log(categoryCounts);
 });
 
+for (obj in categoryCounts) {
+	if (obj.Category == currentCategory) {
+		pieData.push(
+			{
+				Restaurant: obj.Restaurant;
+				count: obj.count;
+			});
+	}
+}
+
+console.log(pieData);
 
 }
