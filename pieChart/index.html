@@ -5,6 +5,34 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="pieChart.js"> </script>
+	  <style> 
+    div.tooltip { 
+      position: absolute;     
+      text-align: center;        
+      width: 250px;          
+      height: 20px;         
+      padding: 2px;       
+      font: 14px sans-serif;    
+      background: #FFFFFF;  
+      border: 2px solid;
+      border-color: #7AA38F; 
+      border-radius:5px;       
+      pointer-events: none;     
+    }
+
+    h1 {
+        font-family: sans-serif;
+        margin-left: 110px;
+        padding:10px;
+    }
+    p {
+        font-family: sans-serif;
+        margin-left: 110px;
+        font-size: 16px;
+        padding:5px;
+    }
+
+  </style>
 </head>
 <body>
 Category: 
@@ -19,7 +47,13 @@ Category:
 <option>Sandwich</option>
 <option>Side</option>
 </select> 
+<section class="canvas" id = "chart">
+</section>
 <script> 
+$("#categorySelect").change(function() {
+	d3.select("svg").remove();
+  pieChart("foodDataSet.csv")
+});
 pieChart("foodDataSet.csv");
 </script>
 </body>
