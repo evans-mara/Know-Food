@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Know Food Beverage</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="compare.js"> </script>
+	<style> 
+            div.tooltip {   
+                position: absolute;         
+                text-align: left;         
+                width: 75px;                    
+                height: 75px;                   
+                padding: 2px;               
+                font: 12px monospace;  
+                border-style: solid;    
+                background: white;
+                border-width: 1px;       
+                border-radius: 4px;   
+                border-color: gray;    
+                pointer-events: none;           
+            }
+
+        </style>
+</head>
+<body>
+<section class="topleft">
+	<h1> Know Food compare 2 </h1>
+</section>
+<section class="topright">
+	<!-- <p> Exploring D3 Stack</p> -->
+	<form action="##">
+	First restaurant: <input type="text" name="firstRest" id = "firstRest" onchange="remove()"><br>
+	  First item: <input type="text" name="first" id = "first" onchange="remove()"><br>
+	Second restaurant: <input type="text" name="secondRest" id="secRest" onchange="remove()"><br>
+	  Second item: <input type="text" name="second" id="sec" onchange="remove()"><br>
+	  <button onclick="compare('Sheet1.csv')">Click me</button>
+	</form>
+</section>
+
+<section class="canvas">
+	<div class="chart"></div>
+</section>
+
+<section class = "words">
+	<p  id = "wordsId"> &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;Calories &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Carbohydrates (g) &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;Cholesterol (mg)</p>
+</section>
+
+<script type="text/javascript">
+	document.getElementById("wordsId").style.visibility = "hidden";
+</script>
+
+<!-- <script type="text/javascript">
+	compare("Sheet1.csv");
+</script>
+ -->
+</body>
+</html>

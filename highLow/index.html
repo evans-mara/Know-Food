@@ -4,6 +4,23 @@
 	<title>Know Food Beverage</title>
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="highLow.js"> </script>
+	<style> 
+            div.tooltip {   
+                position: absolute;         
+                text-align: left;         
+                width: 100px;                    
+                height: 100px;                   
+                padding: 2px;               
+                font: 12px monospace;  
+                border-style: solid;    
+                background: white;
+                border-width: 1px;       
+                border-radius: 4px;   
+                border-color: gray;    
+                pointer-events: none;           
+            }
+
+    </style>
 </head>
 <body>
 <section class="topleft">
@@ -12,11 +29,35 @@
 <section class="topright">
 	<p> Exploring D3 Stack</p>
 </section> -->
+<select id = "category" onchange="remove()">
+  <option value="Beverage">Beverage</option>
+  <option value="Breakfast">Breakfast</option>
+  <option value="Chicken">Chicken</option>
+  <option value="Condiment">Condiment</option>
+  <option value="Dessert">Dessert</option>
+  <option value="Kids">Kids</option>
+  <option value="Salad">Salad</option>
+  <option value="Sandwich">Sandwich</option>
+  <option value="Side">Side</option>
+</select>
+<button onclick="highLow('Sheet1.csv')">Submit</button>
+
+<br>
+<br>
+
 <section class="canvas">
 	<div class="chart"></div>
 </section>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	highLow("Sheet2.csv");
+</script> -->
+
+<section class = "words">
+	<p  id = "wordsId">&#160; &#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;Arby's&#160;&#160;&#160;&#160;&#160;&#160;&#160;Burger King&#160;&#160;&#160;&#160;&#160;&#160;Carl's Jr&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Chick-fil-a&#160;&#160;&#160;&#160;&#160;&#160;In-N-Out&#160;&#160;&#160;&#160;Jack in the Box&#160;&#160;&#160;&#160;&#160;&#160;&#160;KFC&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;McDonald's&#160;&#160;&#160;&#160;&#160;Popeye's&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sonic&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Taco Bell&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Wendy's&#160;&#160;&#160;&#160;&#160;&#160;Whataburger</p>
+</section>
+
+<script type="text/javascript">
+	document.getElementById("wordsId").style.visibility = "hidden";
 </script>
 
 </body>
