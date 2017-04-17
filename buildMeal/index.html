@@ -18,115 +18,181 @@
 		#restaurantItems {
 			width: 200px;
 		}
+		#mealStats {
+			text-align: left;
+		}
+		b {
+			text-align:center;
+		}
+		label {
+			width: 200px
+			margin-right: 20px;		}
+		span {
+			padding-left:10px;
+		}
 
 	</style>
 </head>
 <body>
-<div>
-<div>
-Restaurant: <br>
-<select id = "selectedRestaurant" size=13>
-<option>Arby's</option>
-<option>Burger King</option>
-<option>Carl's Jr</option>
-<option>Chick-fil-a</option>
-<option>In-N-Out</option>
-<option>Jack in the Box</option>
-<option>KFC</option>
-<option>McDonald's</option>
-<option>Popeye's</option>
-<option>Sonic</option>
-<option>Taco Bell</option>
-<option>Wendy's</option>
-<option>Whataburger</option>
-</select>
-</div>
+	<div>
+		<div>
+			Restaurant: <br>
+			<select id = "selectedRestaurant" size=13>
+				<option>Arby's</option>
+				<option>Burger King</option>
+				<option>Carl's Jr</option>
+				<option>Chick-fil-a</option>
+				<option>In-N-Out</option>
+				<option>Jack in the Box</option>
+				<option>KFC</option>
+				<option>McDonald's</option>
+				<option>Popeye's</option>
+				<option>Sonic</option>
+				<option>Taco Bell</option>
+				<option>Wendy's</option>
+				<option>Whataburger</option>
+			</select>
+		</div>
 
-<div> Category: <br> <select id = "restaurantCategories" size = 13> </select> </div>
-<div> Subcategories: <br> <select id = "restaurantSubcategories" size = 13> </select> </div>
-<div> Items: <br><select id = "restaurantItems" size = 13> </select> <br> 
+		<div> Category: <br> <select id = "restaurantCategories" size = 13> </select> </div>
+		<div> Subcategories: <br> <select id = "restaurantSubcategories" size = 13> </select> </div>
+		<div> Items: <br><select id = "restaurantItems" size = 13> </select> <br> 
 
-</div>
-<button id = "addItem"> Add Item</button>
-</div>
-<br>
-<div> My Meal: <br>
-<select id = "meal" size = 25> </select>
-<br>
-<button id = "removeSelected"> Remove Item </button>
-</div>
-<div id = "mealStats">
-<b>Meal Statistics </b> <br>
-Calories: <p id = "totalCals"> </p> 
-Calories from Fat: <p id = "fatCal"> </p>
-Fat (g): <p id = "totalFat"> </p>
-Saturated Fat (g): <p id = "satFat"> </p>
-Trans Fat (g): <p id = "transFat"> </p>
-Cholesterol (mg): <p id = "cholesterol"> </p>
-Sodium (mg): <p id = "sodium"> </p>
-Carbohydrates (g): <p id = "carbs"> </p>
-Fiber (g): <p id = "fiber"> </p>
-Sugars (g): <p id = "sugar"> </p>
-Protein (g): <p id = "protein"> </p>
-
-
-</div>
-<script> 
-var allData = [];
-d3.csv("foodDataSet.csv", function(data) {
-		allData = data;
-	});
+		</div>
+		<button id = "addItem"> Add Item</button>
+	</div>
+	<br>
+	<div> My Meal: <br>
+		<select id = "meal" size = 25> </select>
+		<br>
+		<button id = "removeSelected"> Remove Item </button>
+	</div>
+	<div id = "mealStats">
+		<b>Meal Statistics </b> <br>
+		<label> Calories: </label> <span id = "Calories">0</span><br>
+		<label> Calories from Fat: </label> <span id = "CaloriesFromFat">0</span><br>
+		<label> Fat (g): </label><span id = "TotalFatg">0</span><br>
+		<label> Saturated Fat (g):</label></label> <span id = "SaturatedFatg">0</span><br>
+		<label>Trans Fat (g):</label> <span id = "TransFatg">0</span><br>
+		<label>Cholesterol (mg): </label><span id = "Cholesterolmg">0</span> <br>
+		<label>Sodium (mg): </label><span id = "Sodiummg">0</span> <br>
+		<label>Carbohydrates (g): </label><span id = "Carbohydratesg">0</span> <br>
+		<label>Fiber (g): </label><span id = "Fiberg">0</span> <br>
+		<label>Sugars (g):</label> <span id = "Sugarsg">0</span> <br>
+		<label>Protein (g): </label><span id = "Proteing">0</span> 
 
 
+	</div>
+	<script> 
+		var allData = [];
+		var myMeal = [];
 
-$("#selectedRestaurant").change(function() {
-	$("#restaurantCategories").html('');
-	$("#restaurantSubcategories").html('');
-	$("#restaurantItems").html('');
-	var addedCats = {};
-	for (obj in allData) {
-		if (allData[obj].Restaurant == $("#selectedRestaurant").val()) {
-			if (!(allData[obj].Category in addedCats)) {
-			$("#restaurantCategories").append('<option>' +allData[obj].Category+' </option>');
-			addedCats[allData[obj].Category] = 1;
+		var statNames = ["Calories", "Calories From Fat", "Total Fat (g)", "Saturated Fat (g)", "Trans Fat (g)", "Cholesterol (mg)", "Sodium (mg)", "Carbohydrates (g)", "Fiber (g)", "Sugars (g)", "Protein (g)"];
+		var stats  = [];
+		var tempStat = {};
+		for (stat in statNames) {
+			tempStat[stat] = {
+				stat: statNames[stat],
+				value: 0
+			};
+		};
+
+		Object.keys(tempStat).forEach(function(key) {
+			stats.push(tempStat[key]);
+		});
+
+		d3.csv("foodDataSet.csv", function(data) {
+			allData = data;
+		});
+
+
+
+		$("#selectedRestaurant").change(function() {
+			$("#restaurantCategories").html('');
+			$("#restaurantSubcategories").html('');
+			$("#restaurantItems").html('');
+			var addedCats = {};
+			for (obj in allData) {
+				if (allData[obj].Restaurant == $("#selectedRestaurant").val()) {
+					if (!(allData[obj].Category in addedCats)) {
+						$("#restaurantCategories").append('<option>' +allData[obj].Category+' </option>');
+						addedCats[allData[obj].Category] = 1;
+					}
+				}
+			}
+		});
+
+		$("#restaurantCategories").change(function() {
+			$("#restaurantSubcategories").html('');
+			$("#restaurantItems").html('');
+			var added = {};
+			for (obj in allData) {
+				if ((allData[obj].Restaurant == $("#selectedRestaurant").val()) && (allData[obj].Category == $("#restaurantCategories").val())) {
+					if (!(allData[obj].SubCategory in added)) {
+						$("#restaurantSubcategories").append('<option>' +allData[obj].SubCategory+' </option>');
+						added[allData[obj].SubCategory] = 1;
+					}
+				}
+			}
+
+		});
+
+		$("#restaurantSubcategories").change(function() {
+			$("#restaurantItems").html('');
+			var added = {};
+			for (obj in allData) {
+				if ((allData[obj].Restaurant == $("#selectedRestaurant").val()) && (allData[obj].Category == $("#restaurantCategories").val())
+					&& (allData[obj].SubCategory == $("#restaurantSubcategories").val())) {
+					if (!(allData[obj].Item in added)) {
+						$("#restaurantItems").append('<option value = '+obj+'>' +allData[obj].Item+' </option>');
+						added[allData[obj].Item] = 1;
+					}
+				}
+			}
+
+		});
+
+		$( "#addItem" ).click(function() {
+			var selectedItem = $("#restaurantItems").val();
+			if (selectedItem == null) {
+				alert("Please select an item!");
+			}
+			else {
+				$("#meal").append('<option value ='+selectedItem+'>'+allData[selectedItem].Item + ' (' + allData[selectedItem].Restaurant + ') </option>');
+				myMeal.push(allData[selectedItem]);
+				updateStats();
+			}
+
+		});
+
+		$("#removeSelected").click(function() {
+			var selectedItem = $("#meal").val();
+			if (selectedItem == null) {
+				alert("Please select an item!");
+			}
+			else {
+				delete myMeal[myMeal.indexOf(allData[selectedItem])];
+				$("#meal option[value="+selectedItem+"]").remove();
+				updateStats();
+			}
+		});
+
+		function updateStats() {
+
+			for (stat in stats) {
+				var statSum = 0
+				for (item in myMeal) {
+					var currentStat = stats[stat].stat;
+					//console.log(currentStat + " " + myMeal[item][currentStat]);
+					//console.log(myMeal[item].stats[stat].stat);
+					statSum += +myMeal[item][currentStat];
+				}
+				var currentStat = stats[stat].stat
+				currentStat =currentStat.replace(/\s+/g, '');
+				currentStat = currentStat.replace(/[()]/g, '')
+				$("#"+currentStat).text(statSum);
+			}
 		}
-		}
-	}
-});
-
-$("#restaurantCategories").change(function() {
-	$("#restaurantSubcategories").html('');
-	$("#restaurantItems").html('');
-	var added = {};
-	for (obj in allData) {
-		if ((allData[obj].Restaurant == $("#selectedRestaurant").val()) && (allData[obj].Category == $("#restaurantCategories").val())) {
-			if (!(allData[obj].SubCategory in added)) {
-			$("#restaurantSubcategories").append('<option>' +allData[obj].SubCategory+' </option>');
-			added[allData[obj].SubCategory] = 1;
-		}
-		}
-	}
-	
-});
-
-$("#restaurantSubcategories").change(function() {
-	$("#restaurantItems").html('');
-	var added = {};
-	for (obj in allData) {
-		if ((allData[obj].Restaurant == $("#selectedRestaurant").val()) && (allData[obj].Category == $("#restaurantCategories").val())
-			&& (allData[obj].SubCategory == $("#restaurantSubcategories").val())) {
-			if (!(allData[obj].Item in added)) {
-			$("#restaurantItems").append('<option>' +allData[obj].Item+' </option>');
-			added[allData[obj].Item] = 1;
-		}
-		}
-	}
-	
-});
-
-$( "#addItem" ).click(function() {
-  	alert("how about a salad instead?");
-});
-</script>
+	</script>
 </body>
 </html>
