@@ -1,13 +1,24 @@
 function highLow(filename) {
 
+
+var category = document.getElementById("category").value;
+
+console.log(category);
+
 var margin = {top: 20, bottom: 20, left: 60, right: 60};
-var width = 1000 - margin.left - margin.right;
+var width = 1300 - margin.left - margin.right;
 var height = 500 - margin.top - margin.bottom;
 
 var canvas = d3.select(".canvas")
 			 	.append("svg")
 			 	.attr("width", width)
-			 	.attr("height", height);
+			 	.attr("height", height)
+			 	.style("padding", "20px")
+                .style("padding-left", "40px");
+
+var tooltip = d3.select("body").append("div")   
+                .attr("class", "tooltip")               
+                .style("opacity", 0);
 
 d3.csv(filename, function(data) {
 		var allKeys = d3.keys(data[0]);
@@ -29,6 +40,7 @@ d3.csv(filename, function(data) {
 			barMinVals[restaurants[i]] = 999;
 			barMaxName[restaurants[i]] = "";
 			barMinName[restaurants[i]] = "";
+
 			
 		}
 
@@ -36,18 +48,22 @@ d3.csv(filename, function(data) {
 			//console.log(object);
 			//console.log(data[object]["Calories"]);
 			//console.log(data[object]["Restaurant"]);
-			if (barMaxVals[data[object]["Restaurant"]] < data[object]["Calories"]) {
-				barMaxVals[data[object]["Restaurant"]] = data[object]["Calories"];
-				barMaxName[data[object]["Restaurant"]] = data[object]["Item"];
-			}
-			if (barMinVals[data[object]["Restaurant"]] > data[object]["Calories"]) {
-				barMinVals[data[object]["Restaurant"]] = data[object]["Calories"];
-				barMinName[data[object]["Restaurant"]] = data[object]["Item"];
+
+			// console.log(data[object]["Category"] == category);
+			if (data[object]["Category"] == category) {			
+				if (barMaxVals[data[object]["Restaurant"]] < data[object]["Calories"]) {
+					barMaxVals[data[object]["Restaurant"]] = data[object]["Calories"];
+					barMaxName[data[object]["Restaurant"]] = data[object]["Item"];
+				}
+				if (barMinVals[data[object]["Restaurant"]] > data[object]["Calories"]) {
+					barMinVals[data[object]["Restaurant"]] = data[object]["Calories"];
+					barMinName[data[object]["Restaurant"]] = data[object]["Item"];
+				}
 			}
 		}
 
-		 console.log(barMaxVals);
-		 console.log(barMinVals);
+		 // console.log(barMaxVals);
+		 // console.log(barMinVals);
 		// console.log(barMaxName);
 		// console.log(barMinName);
 
@@ -75,16 +91,16 @@ d3.csv(filename, function(data) {
 
 
 		for(obj in barMaxVals){
-			if (barMinVals != 999) {
-				array.push({
-					key: obj,
-					num: barMaxVals[obj]
-				});
-				array.push({
-					key: obj,
-					num: barMinVals[obj]
-				});
-			}
+			array.push({
+				key: obj,
+				num: barMaxVals[obj],
+				itemName: barMaxName[obj]
+			});
+			array.push({
+				key: obj,
+				num: barMinVals[obj],
+				itemName: barMinName[obj]
+			});
 		}
 
 		var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
@@ -94,9 +110,8 @@ d3.csv(filename, function(data) {
 						.range([height,0])
 						.domain([0,maxY]);
 
-
 		var colorScale = d3.scaleOrdinal(d3.schemeCategory20);
-		console.log(array);
+		//console.log(array);
 		canvas.selectAll("rect")
 			  .data(array)
 			  .enter()
@@ -105,18 +120,40 @@ d3.csv(filename, function(data) {
 			  	return colorScale(d.key);
 			  })
 			  .attr("x", function(d) {
-			  	console.log(array.indexOf(d));
+			  	//console.log(array.indexOf(d));
 			  	return xScale(array.indexOf(d));
 			  })
 			  .attr("y", function(d) {
-			  	console.log(d.num);
+			  	//console.log(d.num);
 			  	return yScale(d.num);
 			  })
 			  .attr("height", function(d) {
 			  	return d.num;
 			  })
-			  .attr("width", 10);
+			  .attr("width", 20)
+			  .on("mouseover", function(d) {
+                        var ev = 0;                        
+                        if(d!=null){
+	                       tooltip.html("<strong style=\"color:red\">" + d.key + "<br>" + "</strong>" + "<strong style=\"color:rgb(91,121,145)\">" + d.itemName + "</strong>" + "<p style=\"color:black\">" + d.num)  
+	                        .style("left", (d3.event.pageX) + "px")     
+	                        .style("top", (d3.event.pageY - 28) + "px")
+	                        .style("opacity", 1);  
+                      }
+                    })                  
+              .on("mouseout", function(d) {           
+                        tooltip.style("opacity", 0);    
+              });
 
-		
+
+		//console.log(maxY);
 	});
+
+document.getElementById("wordsId").style.visibility = "visible";
+
+}
+
+function remove(){
+	d3.select("svg").remove();
+	document.getElementById("wordsId").style.visibility = "hidden";
+	console.log("remove called");
 }
