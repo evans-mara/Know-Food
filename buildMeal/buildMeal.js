@@ -1,9 +1,11 @@
-function buildMeal() {
 var allData = [];
-		var myMeal = [];
+var myMeal = [];
+var statNames = ["Calories", "Calories From Fat", "Total Fat (g)", "Saturated Fat (g)", "Trans Fat (g)", "Cholesterol (mg)", "Sodium (mg)", "Carbohydrates (g)", "Fiber (g)", "Sugars (g)", "Protein (g)"];
+var stats  = [];
+var suggested = [200, 58.5, 65, 20, 2, 30, 240, 300, 25.01, 25, 50];
 
-		var statNames = ["Calories", "Calories From Fat", "Total Fat (g)", "Saturated Fat (g)", "Trans Fat (g)", "Cholesterol (mg)", "Sodium (mg)", "Carbohydrates (g)", "Fiber (g)", "Sugars (g)", "Protein (g)"];
-		var stats  = [];
+
+function buildMeal() {
 		var tempStat = {};
 		for (stat in statNames) {
 			tempStat[stat] = {
@@ -19,9 +21,7 @@ var allData = [];
 		d3.csv("foodDataSet.csv", function(data) {
 			allData = data;
 		});
-
-
-
+		updateStats();
 		$("#selectedRestaurant").change(function() {
 			$("#restaurantCategories").html('');
 			$("#restaurantSubcategories").html('');
@@ -67,6 +67,9 @@ var allData = [];
 
 		});
 
+
+
+
 		$( "#addItem" ).click(function() {
 			var selectedItem = $("#restaurantItems").val();
 			if (selectedItem == null) {
@@ -86,26 +89,138 @@ var allData = [];
 				alert("Please select an item!");
 			}
 			else {
-				delete myMeal[myMeal.indexOf(allData[selectedItem])];
+				myMeal.splice(myMeal.indexOf(allData[selectedItem]),1);
 				$("#meal option[value="+selectedItem+"]").remove();
 				updateStats();
 			}
 		});
 
+
+
 }
 		function updateStats() {
 
-			for (stat in stats) {
-				var statSum = 0
-				for (item in myMeal) {
-					var currentStat = stats[stat].stat;
-					//console.log(currentStat + " " + myMeal[item][currentStat]);
-					//console.log(myMeal[item].stats[stat].stat);
-					statSum += +myMeal[item][currentStat];
-				}
-				var currentStat = stats[stat].stat
-				currentStat =currentStat.replace(/\s+/g, '');
-				currentStat = currentStat.replace(/[()]/g, '')
-				$("#"+currentStat).text(statSum);
+
+		var tooltip = d3.select("body").append("div")   
+                .attr("class", "tooltip")               
+                .style("opacity", 0);
+
+		for (stat in stats) {
+			var statSum = 0
+			stats[stat].value = 0;
+			for (item in myMeal) {
+				var currentStat = stats[stat].stat;
+
+				stats[stat].value += +myMeal[item][currentStat];
 			}
+			var currentStat = stats[stat].stat
+			currentStat =currentStat.replace(/\s+/g, '');
+			currentStat = currentStat.replace(/[()]/g, '')
+			$("#"+currentStat).text(stats[stat].value);
+			}
+
+
+		d3.select("svg").remove();
+
+
+		var margin = {top: 20, bottom: 20, left: 0, right: 60};
+		var width = 1200 - margin.left - margin.right;
+		var height = 400 - margin.top - margin.bottom;
+
+		var canvas = d3.select(".canvas")
+			 	.append("svg")
+			 	.attr("width", width)
+			 	.attr("height", height)
+			 	.style("padding", "20px")
+                .style("padding-left", "40px");
+
+        var xScale = d3.scaleLinear()
+						.range([0, width])
+						.domain([0, width]);
+
+		var yScale = d3.scaleLinear()
+						.range([0,height])
+						.domain([0,11]);
+
+		canvas.selectAll("rect")
+				.data(stats)
+				.enter()
+				.append("rect")
+				.attr("fill", "blue")
+				.attr("y", function(d) { 
+					return yScale(stats.indexOf(d));
+				})
+				.attr("x", function(d) {
+					return xScale(0)+85;
+				})
+				.attr("height", "20")
+				.attr("width", function(d) {
+					if (d.stat == "Calories" || d.stat == "Calories From Fat" || d.stat ==  "Cholesterol (mg)" || d.stat == "Sodium (mg)") {
+						return d.value/10.0;
+					}
+					else {
+						return d.value;
+					}
+					
+				})
+				.on("mouseover", function(d) {                    
+	                   tooltip.html("<strong style=\"color:red\">" + d.stat + "<br>" + "</strong>" + "<strong style=\"color:rgb(91,121,145)\">" + d.value + "</strong>")  
+	                        .style("left", (d3.event.pageX) + "px")     
+	                        .style("top", (d3.event.pageY - 28) + "px")
+	                        .style("opacity", 1);  
+                      
+                    })                  
+              .on("mouseout", function(d) {           
+                        tooltip.style("opacity", 0);    
+              });
+
+		
+		canvas.selectAll("line")
+				.data(suggested)
+				.enter()
+				.append("line")
+				.attr("stroke", "red")
+				.attr("y1", function(d) {
+				//	console.log(yScale(suggested.indexOf(d));
+					return yScale(suggested.indexOf(d));
+				})
+				.attr("y2", function(d) {
+					console.log(suggested.indexOf(d));
+					return yScale(suggested.indexOf(d))+20;
+				})
+				.attr("x1", function(d) {
+					return xScale(d)+85;
+				})
+				.attr("x2", function(d) {
+					return xScale(d)+85;
+				})
+				.attr("height", "20")
+				.attr("stroke-width", "5").on("mouseover", function(d) {
+						var statname = stats[suggested.indexOf(d)].stat
+						var val = d;
+						if (statname == "Calories" || statname == "Calories From Fat" || statname ==  "Cholesterol (mg)" || statname == "Sodium (mg)") {
+							val *= 10;
+						}             
+	                   tooltip.html("<strong style=\"color:red\"> Suggested " + statname + " based on 2000 Calorie Diet <br>" + "</strong>" + "<strong style=\"color:rgb(91,121,145)\">" + d + "</strong>")  
+	                        .style("left", (d3.event.pageX) + "px")     
+	                        .style("top", (d3.event.pageY - 28) + "px")
+	                        .style("opacity", 1);  
+                      
+                    })                  
+              .on("mouseout", function(d) {           
+                        tooltip.style("opacity", 0);    
+              });
+
+         canvas.selectAll("text")
+         		.data(stats)
+         		.enter()
+         		.append("text")
+         		.attr("y", function(d) {
+         			return yScale(stats.indexOf(d))+15;
+         		})
+         		.attr("x", "0")
+         		.text(function(d) {
+         			return d.stat;
+         		})
+         		.style("font", "10px sans-serif");
 		}
