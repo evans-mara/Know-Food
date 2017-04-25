@@ -17,6 +17,12 @@ var canvas = d3.select(".canvas")
 			 	.attr("height", height)
 			 	.style("padding", "20px")
                 .style("padding-left", "40px");
+var axis = d3.select(".axis")
+			 	.append("svg")
+			 	.attr("width", width)
+			 	.attr("height", 50)
+			 	.style("padding", "20px")
+                .style("padding-left", "40px");
 
 var tooltip = d3.select("body").append("div")   
                 .attr("class", "tooltip")               
@@ -159,9 +165,25 @@ var i = 0;
                         tooltip.style("opacity", 0);    
               });
 
+		axis.selectAll("text")
+	         		.data(array)
+	         		.enter()
+	         		.append("text")
+	         		.attr("y", 0)
+	         		.attr("x", function(d) {
+	         			if(array.indexOf(d)%2==0){
+	         				return xScale(array.indexOf(d))+5;
+	         			}
+	         			else{
+	         				return -1000;
+	         			}
+	         		})
+	         		.text(function(d) {
+	         			return d.key;
+	         		})
+	         		.style("font", "10px sans-serif");
+			});
 
-		//console.log(maxY);
-	});
 
 document.getElementById("wordsId").style.visibility = "visible";
 
