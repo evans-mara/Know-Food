@@ -195,8 +195,7 @@ function buildMeal() {
 					return xScale(d)+85;
 				})
 				.attr("height", "20")
-				.attr("stroke-width", "5")
-				.on("mouseover", function(d) {
+				.attr("stroke-width", "5").on("mouseover", function(d) {
 						var statname = stats[suggested.indexOf(d)].stat
 						var val = d;
 						if (statname == "Calories" || statname == "Calories From Fat" || statname ==  "Cholesterol (mg)" || statname == "Sodium (mg)") {

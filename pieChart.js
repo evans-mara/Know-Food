@@ -8,13 +8,15 @@ function pieChart(filename) {
 	var currentCategory = $("#categorySelect").val();
 	var restaurants = ["Arby's", "Burger King", "Carl's Jr", "Chick-fil-a", "In-N-Out", "Jack in the Box", "KFC", "McDonald's", "Popeye's", "Sonic", "Taco Bell", "Wendy's", "Whataburger"];
 
-var canvas = d3.select(".canvas")
+var canvas = d3.select(".piecanvas")
 			 	.append("svg")
 			 	.attr("width", width)
 			 	.attr("height", height);
-			 
+
+$('svg:nth-child(1)').attr("id", "pc");
+
 var tooltip = d3.select("body").append("div") 
-        .attr("class", "tooltip")       
+        .attr("class", "pietooltip")       
         .style("opacity", 0);
 
 
