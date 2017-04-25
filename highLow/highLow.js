@@ -184,13 +184,11 @@ var i = 0;
 	         		.style("font", "10px sans-serif");
 			});
 
-
-document.getElementById("wordsId").style.visibility = "visible";
-
 }
 
 function remove(){
 	d3.select("svg").remove();
-	document.getElementById("wordsId").style.visibility = "hidden";
+	
+	d3.select("svg").remove();
 	console.log("remove called");
 }
