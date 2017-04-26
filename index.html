@@ -7,6 +7,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="buildMeal.js"> </script>
 	<script src="pieChart.js"> </script>
+	<script src="highLow.js"> </script>
 	<style>
 		select {
 			width: 100px;
@@ -39,6 +40,20 @@
 				text-align: left;         
 				width: 200px;                    
 				height: 50px;                   
+				padding: 2px;               
+				font: 12px monospace;  
+				border-style: solid;    
+				background: white;
+				border-width: 1px;       
+				border-radius: 4px;   
+				border-color: gray;    
+				pointer-events: none;           
+			}
+			div.hilotooltip {   
+				position: absolute;         
+				text-align: left;         
+				width: 150px;                    
+				height: 100px;                   
 				padding: 2px;               
 				font: 12px monospace;  
 				border-style: solid;    
@@ -124,9 +139,10 @@
 			<select id = "meal" size = 25> </select>
 			<br>
 			<button id = "removeSelected"> Remove Item </button>
+			<button id = "clearButton"> Clear All </button>
 		</div>
 		<div class = "canvas"> </div>
-		<div id = "pie">
+		<div id = "charts">
 			Category: 
 			<select id = "categorySelect"> 
 				<option>Beverage</option>
@@ -138,32 +154,62 @@
 				<option>Sandwich</option>
 				<option>Side</option>
 			</select> 
-			<section>
-			<section class="piecanvas" id = "chart">
-			</section>
-			</section>
-		</div>
+			<select id = "statSelect">
+				<option value="Calories">Calories</option>
+				<option value="Calories From Fat">Calories From Fat</option>
+				<option value="Total Fat (g)">Total Fat (g)</option>
+				<option value="Saturated Fat (g)">Saturated Fat (g)</option>
+				<option value="Trans Fat (g)">Trans Fat (g)</option>
+				<option value="Cholesterol (mg)">Cholesterol (mg)</option>
+				<option value="Sodium (mg)">Sodium (mg)</option>
+				<option value="Carbohydrates (g)">Carbohydrates (g)</option>
+				<option value="Fiber (g)">Fiber (g)</option>
+				<option value="Sugars (g)">Sugars (g)</option>
+				<option value="Protein (g)">Protein (g)</option>
+			</select>
 
-<!-- <img src="https://raw.githubusercontent.com/evans-mara/Know-Food/master/parallel%20coordinates.jpg" alt="parallel coordinates" align="middle" height="300" width="550">
-	<br> -->
-<!-- 	<img src="https://raw.githubusercontent.com/evans-mara/Know-Food/master/pie%20chart.jpg" alt="pie chart" align="middle" height="300" width="550">
-	Link to prototype: <a href = pieChart>Pie Chart Category</a>
-	<br> -->
-	<img src="https://raw.githubusercontent.com/evans-mara/Know-Food/master/category%20bar.jpg" alt="category bar" align="middle" height="300" width="550">
-	Link to prototype: <a href = highLow>High Low Category</a>
-	<br>
-	<img src="https://raw.githubusercontent.com/evans-mara/Know-Food/master/comparison.jpg" alt="comparison" align="middle" height="300" width="550">
+			<section>
+				<section class="piecanvas" id = "chart">
+				</section>
+			</section>
+			
+			<div id = "highLow">
+			<section class = "highLowcanvas"> 
+			</section>
+			<span class = "hlAxis"> 
+			</span>
+			</div>
+		</div>
+<!-- 	<img src="https://raw.githubusercontent.com/evans-mara/Know-Food/master/comparison.jpg" alt="comparison" align="middle" height="300" width="550">
 	Link to prototype: <a href = comparative>Compare 2 Items</a>
-	<br>
+	<br> -->
 	<script> 
 		buildMeal();
 		$("#categorySelect").change(function() {
 			d3.select(".piecanvas").remove();
-			d3.select("#pie").append("div");
-			d3.select("#pie div").attr("class", "piecanvas");
-			pieChart("foodDataSet.csv")
+			d3.select(".highLowcanvas").remove();
+			d3.select(".hlAxis").remove();
+			d3.select("#charts").append("section");
+			d3.select("#charts section").attr("class", "piecanvas");
+			d3.select("#highLow").append("section");
+			d3.select("#highLow section").attr("class", "highLowcanvas");
+			d3.select("#highLow").append("span");
+			d3.select("#highLow span").attr("class", "hlAxis");
+			pieChart("foodDataSet.csv");
+			highLow("foodDataSet.csv");
+		});
+		$("#statSelect").change(function() {
+			d3.select(".highLowcanvas").remove();
+			d3.select(".hlAxis").remove();
+			d3.select("#highLow").append("section");
+			d3.select("#highLow section").attr("class", "highLowcanvas");
+			d3.select("#highLow").append("span");
+			d3.select("#highLow span").attr("class", "hlAxis");
+			highLow("foodDataSet.csv");
+
 		});
 		pieChart("foodDataSet.csv");
+		highLow("foodDataSet.csv");
 	</script>
 </body>
 </html>

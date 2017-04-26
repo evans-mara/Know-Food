@@ -94,6 +94,12 @@ function buildMeal() {
 				updateStats();
 			}
 		});
+		$("#clearButton").click(function() {
+			myMeal = [];
+			
+			$("#meal option").removeAll();
+		
+		});
 
 
 
@@ -181,11 +187,9 @@ function buildMeal() {
 				.append("line")
 				.attr("stroke", "red")
 				.attr("y1", function(d) {
-				//	console.log(yScale(suggested.indexOf(d));
 					return yScale(suggested.indexOf(d));
 				})
 				.attr("y2", function(d) {
-					console.log(suggested.indexOf(d));
 					return yScale(suggested.indexOf(d))+20;
 				})
 				.attr("x1", function(d) {

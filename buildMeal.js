@@ -67,9 +67,6 @@ function buildMeal() {
 
 		});
 
-
-
-
 		$( "#addItem" ).click(function() {
 			var selectedItem = $("#restaurantItems").val();
 			if (selectedItem == null) {
@@ -93,6 +90,11 @@ function buildMeal() {
 				$("#meal option[value="+selectedItem+"]").remove();
 				updateStats();
 			}
+		});
+		$("#clearButton").click(function() {
+			myMeal = [];
+			$("#meal").empty();
+			updateStats();
 		});
 
 
@@ -181,11 +183,9 @@ function buildMeal() {
 				.append("line")
 				.attr("stroke", "red")
 				.attr("y1", function(d) {
-				//	console.log(yScale(suggested.indexOf(d));
 					return yScale(suggested.indexOf(d));
 				})
 				.attr("y2", function(d) {
-					console.log(suggested.indexOf(d));
 					return yScale(suggested.indexOf(d))+20;
 				})
 				.attr("x1", function(d) {
@@ -195,15 +195,19 @@ function buildMeal() {
 					return xScale(d)+85;
 				})
 				.attr("height", "20")
-				.attr("stroke-width", "5").on("mouseover", function(d) {
+				.attr("stroke-width", "5")
+				.on("mouseover", function(d) {
 						var statname = stats[suggested.indexOf(d)].stat
 						var val = d;
 						if (statname == "Calories" || statname == "Calories From Fat" || statname ==  "Cholesterol (mg)" || statname == "Sodium (mg)") {
 							val *= 10;
-						}             
-	                   tooltip.html("<strong style=\"color:red\"> Suggested " + statname + " based on 2000 Calorie Diet <br>" + "</strong>" + "<strong style=\"color:rgb(91,121,145)\">" + d + "</strong>")  
-	                        .style("left", (d3.event.pageX) + "px")     
-	                        .style("top", (d3.event.pageY - 28) + "px")
+						} 
+						if (statname == "Fiber (g)") {
+							val = 25;
+						}            
+	                   tooltip.html("<strong style=\"color:red\"> Suggested " + statname + " based on 2000 Calorie Diet <br>" + "</strong>" + "<strong style=\"color:rgb(91,121,145)\">" + val + "</strong>")  
+	                        .style("left", (d3.event.pageX + 10) + "px")     
+	                        .style("top", (d3.event.pageY - 20) + "px")
 	                        .style("opacity", 1);  
                       
                     })                  
