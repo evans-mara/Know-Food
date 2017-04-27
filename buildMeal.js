@@ -126,7 +126,7 @@ function buildMeal() {
 
 
 		var margin = {top: 20, bottom: 20, left: 0, right: 60};
-		var width = 1200 - margin.left - margin.right;
+		var width = 700 - margin.left - margin.right;
 		var height = 400 - margin.top - margin.bottom;
 
 		var canvas = d3.select(".canvas")

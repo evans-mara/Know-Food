@@ -8,7 +8,12 @@
 	<script src="buildMeal.js"> </script>
 	<script src="pieChart.js"> </script>
 	<script src="highLow.js"> </script>
+	<script src="compare.js"> </script>
+	<!-- <link rel="stylesheet" type="text/css" href="paper.css">  -->
 	<style>
+		body {
+			background-color: #eeeeff;
+		}
 		select {
 			width: 100px;
 		}
@@ -18,13 +23,17 @@
 		}
 		#meal {
 			width: 200px;
-			height:400px;
+
 		}
 		#restaurantItems {
 			width: 200px;
 		}
 		#mealStats {
 			text-align: left;
+			width: 200px;
+			height: 180px;
+			background-color: #fefeff;
+			position: relative;
 		}
 		b {
 			text-align:center;
@@ -63,8 +72,24 @@
 				border-color: gray;    
 				pointer-events: none;           
 			}
+			div.comptooltip {   
+				position: absolute;         
+				text-align: left;         
+				width: 200px;                    
+				height: 75px;                   
+				padding: 2px;               
+				font: 12px monospace;  
+				border-style: solid;    
+				background: white;
+				border-width: 1px;       
+				border-radius: 4px;   
+				border-color: gray;    
+				pointer-events: none;           
+			}
+
 			.canvas {
 				display: inline-block;
+				background-color: #fefeff;
 			}
 			#topBar {
 				height:300px;
@@ -84,6 +109,41 @@
 			}
 			body {
 				font: 13px sans-serif;
+			}
+			#selectors {
+				position:absolute;
+				margin-left: 44%;
+			}
+			button {
+				width: 120px;
+			}
+			.otherButton {
+				width: 100px;
+			}
+			#itemsBox {
+				width: 200px;
+				/*height: 80px;*/
+				background-color: #fefeff;
+				outline: #eeeeff;
+				text-align: left;
+				position:relative;
+				bottom:80px;
+			}
+			.comparison {
+				width: 700px;
+				height: 400px;
+				background-color: #fefeff;
+			}
+			#allCharts{
+				background-color: #fefeff;
+			}
+			#pieHead{
+				position: absolute;
+				margin-left: 17%;
+			}
+			#highHead{
+				position: absolute;
+				margin-left: 60%;
 			}
 
 		</style>
@@ -116,100 +176,121 @@
 			<div> Items: <br><select id = "restaurantItems" size = 13> </select> <br> 
 
 			</div>
-			<button id = "addItem"> Add Item</button>
-			<div id = "mealStats">
-				<b>Meal Statistics </b> <br>
-				<label> Calories: </label> <span id = "Calories">0</span><br>
-				<label> Calories from Fat: </label> <span id = "CaloriesFromFat">0</span><br>
-				<label> Fat (g): </label><span id = "TotalFatg">0</span><br>
-				<label> Saturated Fat (g):</label></label> <span id = "SaturatedFatg">0</span><br>
-				<label>Trans Fat (g):</label> <span id = "TransFatg">0</span><br>
-				<label>Cholesterol (mg): </label><span id = "Cholesterolmg">0</span> <br>
-				<label>Sodium (mg): </label><span id = "Sodiummg">0</span> <br>
-				<label>Carbohydrates (g): </label><span id = "Carbohydratesg">0</span> <br>
-				<label>Fiber (g): </label><span id = "Fiberg">0</span> <br>
-				<label>Sugars (g):</label> <span id = "Sugarsg">0</span> <br>
-				<label>Protein (g): </label><span id = "Proteing">0</span> 
-
+			<div>
+				<button id = "addItem"> Add Item to Meal</button><br>
+				<button id = "addItem1"> Add Item 1</button><br>
+				<button id = "addItem2"> Add Item 2</button>
+			</div>
+			<div> My Meal: <br>
+				<select id = "meal" size = 13> </select>
+				<br>
+				<button id = "removeSelected" class = "otherButton"> Remove Item </button>
+				<button id = "clearButton" class = "otherButton"> Clear Meal </button>
 
 			</div>
+			<div>
+				<div id = "mealStats">
+					<b>Meal Statistics </b> <br>
+					<label> Calories: </label> <span id = "Calories">0</span><br>
+					<label> Calories from Fat: </label> <span id = "CaloriesFromFat">0</span><br>
+					<label> Fat (g): </label><span id = "TotalFatg">0</span><br>
+					<label> Saturated Fat (g):</label><span id = "SaturatedFatg">0</span><br>
+					<label>Trans Fat (g):</label> <span id = "TransFatg">0</span><br>
+					<label>Cholesterol (mg): </label><span id = "Cholesterolmg">0</span> <br>
+					<label>Sodium (mg): </label><span id = "Sodiummg">0</span> <br>
+					<label>Carbohydrates (g): </label><span id = "Carbohydratesg">0</span> <br>
+					<label>Fiber (g): </label><span id = "Fiberg">0</span> <br>
+					<label>Sugars (g):</label> <span id = "Sugarsg">0</span> <br>
+					<label>Protein (g): </label><span id = "Proteing">0</span> 
+				</div>
+				<div id = "itemsBox"> 
+					<strong>Item 1:</strong><br><span id = "item1"> None Selected</span><br> 
+					<strong>Item 2:</strong><br><span id = "item2"> None Selected</span>
+				</div>
+			</div>
 		</div>
-		<br>
-		<div> My Meal: <br>
-			<select id = "meal" size = 25> </select>
+			<div id = "allCharts">
+				<div class = "canvas"> </div>
+				<div class = "comparison"> <section class= "compare"></section></div>
+				<br>
+				<br>
+				<br>
+				<section id = "selectors">
+				<select id = "categorySelect"> 
+					<option>Beverage</option>
+					<option>Breakfast</option>
+					<option>Chicken</option>
+					<option>Condiment</option>
+					<option>Dessert</option>
+					<option>Salad</option>
+					<option>Sandwich</option>
+					<option>Side</option>
+				</select> 
+				<select id = "statSelect">
+					<option value="Calories">Calories</option>
+					<option value="Calories From Fat">Calories From Fat</option>
+					<option value="Total Fat (g)">Total Fat (g)</option>
+					<option value="Saturated Fat (g)">Saturated Fat (g)</option>
+					<option value="Trans Fat (g)">Trans Fat (g)</option>
+					<option value="Cholesterol (mg)">Cholesterol (mg)</option>
+					<option value="Sodium (mg)">Sodium (mg)</option>
+					<option value="Carbohydrates (g)">Carbohydrates (g)</option>
+					<option value="Fiber (g)">Fiber (g)</option>
+					<option value="Sugars (g)">Sugars (g)</option>
+					<option value="Protein (g)">Protein (g)</option>
+				</select>
+			</section>
+
+				<br>
+				<br>
+				<br>
 			<br>
-			<button id = "removeSelected"> Remove Item </button>
-			<button id = "clearButton"> Clear All </button>
-		</div>
-		<div class = "canvas"> </div>
-		<div id = "charts">
-			Category: 
-			<select id = "categorySelect"> 
-				<option>Beverage</option>
-				<option>Breakfast</option>
-				<option>Chicken</option>
-				<option>Condiment</option>
-				<option>Dessert</option>
-				<option>Salad</option>
-				<option>Sandwich</option>
-				<option>Side</option>
-			</select> 
-			<select id = "statSelect">
-				<option value="Calories">Calories</option>
-				<option value="Calories From Fat">Calories From Fat</option>
-				<option value="Total Fat (g)">Total Fat (g)</option>
-				<option value="Saturated Fat (g)">Saturated Fat (g)</option>
-				<option value="Trans Fat (g)">Trans Fat (g)</option>
-				<option value="Cholesterol (mg)">Cholesterol (mg)</option>
-				<option value="Sodium (mg)">Sodium (mg)</option>
-				<option value="Carbohydrates (g)">Carbohydrates (g)</option>
-				<option value="Fiber (g)">Fiber (g)</option>
-				<option value="Sugars (g)">Sugars (g)</option>
-				<option value="Protein (g)">Protein (g)</option>
-			</select>
-
-			<section>
-				<section class="piecanvas" id = "chart">
-				</section>
-			</section>
-			
-			<div id = "highLow">
-			<section class = "highLowcanvas"> 
-			</section>
-			<span class = "hlAxis"> 
-			</span>
+				<h3 id = "pieHead"> Category Breakdown </h3>
+				<h3 id = "highHead"> High and Low by Category </h3>
+				<div id = "charts">
+					<section>
+						<section class="piecanvas" id = "chart">
+						</section>
+					</section>
+				</div>
+				<div id = "highLow">
+					<section class = "highLowcanvas"> 
+					</section>
+					<span class = "hlAxis"> 
+					</span>
+				</div>
 			</div>
-		</div>
-<!-- 	<img src="https://raw.githubusercontent.com/evans-mara/Know-Food/master/comparison.jpg" alt="comparison" align="middle" height="300" width="550">
-	Link to prototype: <a href = comparative>Compare 2 Items</a>
-	<br> -->
-	<script> 
-		buildMeal();
-		$("#categorySelect").change(function() {
-			d3.select(".piecanvas").remove();
-			d3.select(".highLowcanvas").remove();
-			d3.select(".hlAxis").remove();
-			d3.select("#charts").append("section");
-			d3.select("#charts section").attr("class", "piecanvas");
-			d3.select("#highLow").append("section");
-			d3.select("#highLow section").attr("class", "highLowcanvas");
-			d3.select("#highLow").append("span");
-			d3.select("#highLow span").attr("class", "hlAxis");
-			pieChart("foodDataSet.csv");
-			highLow("foodDataSet.csv");
-		});
-		$("#statSelect").change(function() {
-			d3.select(".highLowcanvas").remove();
-			d3.select(".hlAxis").remove();
-			d3.select("#highLow").append("section");
-			d3.select("#highLow section").attr("class", "highLowcanvas");
-			d3.select("#highLow").append("span");
-			d3.select("#highLow span").attr("class", "hlAxis");
-			highLow("foodDataSet.csv");
+			
 
-		});
-		pieChart("foodDataSet.csv");
-		highLow("foodDataSet.csv");
-	</script>
-</body>
-</html>
+			<script> 
+				buildMeal();
+				$("#categorySelect").change(function() {
+					d3.select(".piecanvas").remove();
+					d3.select(".highLowcanvas").remove();
+					d3.select(".hlAxis").remove();
+					d3.select("#charts").append("section");
+					d3.select("#charts section").attr("class", "piecanvas");
+					d3.select("#highLow").append("section");
+					d3.select("#highLow section").attr("class", "highLowcanvas");
+					d3.select("#highLow").append("span");
+					d3.select("#highLow span").attr("class", "hlAxis");
+					pieChart("foodDataSet.csv");
+					highLow("foodDataSet.csv");
+				});
+				$("#statSelect").change(function() {
+					d3.select(".highLowcanvas").remove();
+					d3.select(".hlAxis").remove();
+					d3.select("#highLow").append("section");
+					d3.select("#highLow section").attr("class", "highLowcanvas");
+					d3.select("#highLow").append("span");
+					d3.select("#highLow span").attr("class", "hlAxis");
+					highLow("foodDataSet.csv");
+
+				});
+				pieChart("foodDataSet.csv");
+				highLow("foodDataSet.csv");
+				compare("foodDataSet.csv");
+
+			</script>
+		</body>
+		</html>

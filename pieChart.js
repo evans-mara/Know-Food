@@ -1,7 +1,7 @@
 function pieChart(filename) {
 	var margin = {top: 20, bottom: 20, left: 60, right: 60};
-	var width = 500 - margin.left - margin.right;
-	var height = 500 - margin.top - margin.bottom;
+	var width = 620 - margin.left - margin.right;
+	var height = 620 - margin.top - margin.bottom;
 	var radius = Math.min(width, height) / 2;
 	var categoryCounts = [];
 	var pieData = [];
